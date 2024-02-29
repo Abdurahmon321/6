@@ -1,0 +1,86 @@
+----------------------------------------------------------
+
+-- 1 - masala ----------------------------
+
+-- DROP TABLE IF EXISTS orders;
+
+-- CREATE TABLE IF NOT EXISTS orders(
+-- 	order_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+-- 	p_name VARCHAR(20),
+-- 	p_price INTEGER,
+-- 	soni SMALLINT,
+-- 	buyurtma_vaqti TIME DEFAULT CURRENT_TIME,
+-- 	buyurtma_sanasi DATE DEFAULT CURRENT_DATE,
+-- 	address VARCHAR(20),
+-- 	yetkazib_berish_sanasi VARCHAR(25),
+-- 	yetkazib_berildi BOOLEAN
+-- );
+
+-- INSERT INTO orders(p_name, p_price, soni, address, yetkazib_berish_sanasi, yetkazib_berildi) VALUES
+-- ('OLMA', 1000, 2, 'fargona', '2024-02-23', TRUE),
+-- ('bahi', 1200, 3, 'qoqon', '2024-02-22', TRUE),
+-- ('uzum', 1300, 4, 'oltiariq', '2024-02-21', TRUE),
+-- ('anor', 1400, 5, 'namangan', '2024-02-23', TRUE),
+-- ('nok', 1500, 6, 'fargona', '2024-02-24', TRUE);
+
+-- SELECT * FROM orders;
+
+--------------------------------------------------------------------------------------
+
+-- 2 - masala
+
+-- DROP TABLE IF EXISTS movies;
+
+-- CREATE TABLE IF NOT EXISTS movies(
+-- 	f_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+-- 	f_name VARCHAR(25),
+-- 	lenth_time INTEGER,
+-- 	hajmi INTEGER,
+-- 	komediya BOOLEAN,
+-- 	jangari BOOLEAN,
+-- 	drama BOOLEAN,
+-- 	sarguzasht BOOLEAN,
+-- 	triler BOOLEAN,
+-- 	bollalar_uchun BOOLEAN,
+-- 	korishlar_soni INTEGER,
+-- 	like_soni INTEGER
+-- );
+
+-- INSERT INTO movies(f_name, lenth_time, hajmi, komediya, jangari, drama, sarguzasht, triler, bollalar_uchun, korishlar_soni, like_soni) VALUES
+-- ('MATRITSA 1', 2, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('MATRITSA 2', 3, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2400000, 3600000),
+-- ('MATRITSA 3', 4, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2500000, 3700000),
+-- ('AKVAMEN 1', 1, 2500, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2700000, 3000000),
+-- ('AKVAMEN 2', 2, 2600, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2800000, 3000000),
+-- ('AXMOQDANDA AXMOQROQ 1', 2, 3000, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('AXMOQDANDA AXMOQROQ 2', 2, 4000, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('MATRITSA', 2, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('MATRITSA', 2, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('MATRITSA', 2, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000),
+-- ('MATRITSA', 2, 2000, FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, 2000000, 3000000);
+
+-- SELECT * FROM movies;
+
+-- SELECT * FROM movies WHERE komediya = TRUE;
+
+-- SELECT * FROM movies WHERE jangari = TRUE;
+
+-- SELECT * FROM movies WHERE drama = TRUE;
+
+-- SELECT * FROM movies WHERE sarguzasht = TRUE;
+
+-- SELECT * FROM movies WHERE triler = TRUE;
+
+-- SELECT * FROM movies WHERE bollalar_uchun = TRUE;
+
+-- UPDATE movies SET f_name = 'salom', komediya = TURE WHERE f_id = 8;
+
+-- UPDATE movies SET f_name = 'salom2', bollalar_uchun = TRUE  WHERE f_id = 9;
+
+-- UPDATE movies SET f_name = 'salom3', jangari = TURE WHERE f_id = 10;
+
+-- DELETE FROM movies WHERE f_id = 8;
+
+-- DELETE FROM movies WHERE f_id = 9;
+
+-- DELETE FROM movies WHERE f_id = 10;
